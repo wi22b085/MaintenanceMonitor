@@ -20,5 +20,8 @@ public class MaintenanceMonitorController {
         setMessage(null);
         return "ok";
     }
-
+    @RequestMapping("/api/message")
+    public String getMessage(){
+        return m;
+    }
 }
