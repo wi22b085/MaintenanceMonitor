@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class MaintenanceMonitorController {
     private String m = "Everything operates as expected";
 
-    @RequestMapping("/")
-    public String showStartsite()
+    @RequestMapping("/api/")
+    public String showStartSite()
     {
         return  "Welcome to the Maintenance Monitor!" +
                     "<br>" +
@@ -22,13 +22,11 @@ public class MaintenanceMonitorController {
                     "<br>" +
                 "Type in one of the following options api requests:"+"<br>" +
                     "<br>" +
-                "-)  /set?a=X ... to set the current status to X"  +
+                "-)  /api/message/set?m=X ... to set the current status to X"  +
                     "<br>" +
-                "-)  /setMin?a=X&b=X ... to set the current status using X minutes  and X seconds" +
+                "-)  /api/message ... to see the current status level"  +
                     "<br>" +
-                "-)  /status ... to see the current status level"  +
-                    "<br>" +
-                "-)  /reset ... to reset the current status level";
+                "-)  /api/message/reset ... to reset the current status level";
 
     }
     @RequestMapping("/api/message/set")
